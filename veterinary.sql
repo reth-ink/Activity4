@@ -58,3 +58,17 @@ CREATE TABLE medicalrecords(
     FOREIGN KEY (animalid) REFERENCES animals(animalid),
     FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
 );
+
+INSERT INTO owners (ownerid, ofirstname, olastname, address, phone, email)
+VALUES
+(1, 'Juan', 'Dela Cruz', '123 Mabini St., Manila', '09171234567', 'juan.delacruz@example.com'),
+(2, 'Maria', 'Santos', '45 Rizal Ave., Quezon City', '09182345678', 'maria.santos@example.com'),
+(3, 'Pedro', 'Reyes', '78 Bonifacio Rd., Pasig', '09193456789', 'pedro.reyes@example.com'),
+(4, 'Ana', 'Garcia', '12 Luna St., Makati', '09204567891', 'ana.garcia@example.com'),
+(5, 'Lorenzo', 'Torres', '56 Dimasalang, Manila', '09215678902', 'lorenzo.torres@example.com'),
+(6, 'Carmen', 'Lopez', '89 Malvar St., Caloocan', '09226789013', 'carmen.lopez@example.com'),
+(7, 'Miguel', 'Fernandez', '34 Katipunan Ave., QC', '09237890124', 'miguel.fernandez@example.com'),
+(8, 'Isabel', 'Cruz', '120 Roxas Blvd., Pasay', '09248901235', 'isabel.cruz@example.com'),
+(9, 'Rafael', 'Mendoza', '75 Ortigas Center, Pasig', '09259012346', 'rafael.mendoza@example.com'),
+(10, 'Sofia', 'Ramos', '22 Shaw Blvd., Mandaluyong', '09260123457', 'sofia.ramos@example.com');
+
