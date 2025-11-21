@@ -16,7 +16,7 @@ CREATE TABLE animals(
     breed VARCHAR(50),
     dateofbirth DATE,
     gender VARCHAR(10),
-    color VARCHAR(50).
+    color VARCHAR(50),
     ownerid INT,
     FOREIGN KEY (ownerid)
 REFERENCES owners(ownerid)
@@ -72,3 +72,15 @@ VALUES
 (9, 'Rafael', 'Mendoza', '75 Ortigas Center, Pasig', '09259012346', 'rafael.mendoza@example.com'),
 (10, 'Sofia', 'Ramos', '22 Shaw Blvd., Mandaluyong', '09260123457', 'sofia.ramos@example.com');
 
+INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color, ownerid) 
+VALUES
+(1, 'Leo', 'Lion', 'African Lion', '2018-03-15', 'Male', 'Golden', 1),
+(2, 'Molly', 'Cat', 'Siamese', '2020-06-21', 'Female', 'Cream', 2),
+(3, 'Max', 'Dog', 'Golden Retriever', '2019-09-10', 'Male', 'Golden', 3),
+(4, 'Daisy', 'Cow', 'Holstein', '2017-01-05', 'Female', 'Black & White', 4),
+(5, 'Charlie', 'Horse', 'Arabian', '2015-12-12', 'Male', 'Brown', 5),
+(6, 'Luna', 'Rabbit', 'Netherland Dwarf', '2021-11-01', 'Female', 'White', 6),
+(7, 'Jack', 'Elephant', 'African Elephant', '2012-08-30', 'Male', 'Grey', 7),
+(8, 'Bella', 'Sheep', 'Merino', '2019-04-17', 'Female', 'White', 8),
+(9, 'Rocky', 'Dog', 'Bulldog', '2018-07-22', 'Male', 'Brindle', 9),
+(10, 'Coco', 'Parrot', 'Macaw', '2020-02-14', 'Female', 'Blue & Yellow', 10);
