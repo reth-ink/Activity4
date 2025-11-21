@@ -37,9 +37,9 @@ CREATE TABLE doctors(
     specialty VARCHAR(100),
     phone VARCHAR(15),
     email VARCHAR(100)
-)
+);
 
-CREATE TABLE invoices (
+CREATE TABLE invoices(
     invoiceid INT PRIMARY KEY,
     appointid INT,
     totalamount NUMERIC(10,2),
@@ -47,3 +47,14 @@ CREATE TABLE invoices (
     FOREIGN KEY (appointid) REFERENCES appointments(appointid)
 );
 
+CREATE TABLE medicalrecords(
+    recordid INT PRIMARY KEY,
+    animalid INT,
+    recorddate TIMESTAMP,
+    doctorid INT,
+    DIAGNOSIS TEXT,
+    PRESCRIPTION TEXT,
+    NOTES TEXT,
+    FOREIGN KEY (animalid) REFERENCES animals(animalid),
+    FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
+);
