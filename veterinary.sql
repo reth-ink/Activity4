@@ -162,3 +162,13 @@ FROM owners o
 JOIN animals an ON o.ownerid = an.ownerid
 JOIN appointments a ON an.animalid = a.animalid
 WHERE o.ofirstname = 'Maria';
+
+WITH appointment_counts AS (
+    SELECT a.animalid, a.name, COUNT(ap.appointid) AS num_appointments
+    FROM animals a
+    JOIN appointments ap ON a.animalid = ap.animalid
+    GROUP BY a.animalid, a.name
+)
+SELECT *
+FROM appointment_counts
+WHERE num_appointments = (SELECT MAX(num_appointments) FROM appointment_counts);
