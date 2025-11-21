@@ -153,3 +153,6 @@ WHERE dfirstname = 'Dr.Sofia';
 SELECT DISTINCT species
 FROM animals
 WHERE animalid IN (SELECT animalid FROM appointments);
+
+SELECT SUM(totalamount) AS total_sales
+FROM invoices;
